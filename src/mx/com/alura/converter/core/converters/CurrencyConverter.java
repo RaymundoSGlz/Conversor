@@ -6,16 +6,18 @@ import mx.com.alura.converter.data.CurrencyData;
 
 public class CurrencyConverter {
 
-    private static final String[] UNITS = { "MXN", "USD", "EUR", "JPY", "GBP", "AUD", "CAD" };
+    private static final String[] UNITS = { "MXN", "USD", "EUR", "JPY", "GBP", "AUD", "CAD", "KRW", "CNY", "HKD" };
     private static final String CONVERSION_TYPE = "moneda";
 
     public void convert(double amount, String sourceUnit, String targetUnit) {
         double exchangeRate = CurrencyData.getExchangeRate(sourceUnit, targetUnit);
         double convertedAmount = amount * exchangeRate;
+        String sourceUnitName = CurrencyData.getCurrencyName(sourceUnit);
+        String targetUnitName = CurrencyData.getCurrencyName(targetUnit);
 
         JOptionPane.showMessageDialog(
                 null,
-                amount + " " + sourceUnit + " = " + convertedAmount + " " + targetUnit,
+                amount + " " + sourceUnitName + " = " + convertedAmount + " " + targetUnitName,
                 "Resultado de la conversión",
                 JOptionPane.INFORMATION_MESSAGE
         );
