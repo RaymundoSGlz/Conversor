@@ -3,6 +3,9 @@ package mx.com.alura.converter.data;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * La clase CurrencyData almacena los tipos de cambio entre las divisas y el peso mexicano, así como los nombres de las divisas.
+ */
 public class CurrencyData {
     // Mapa que almacena los tipos de cambio entre las divisas y el peso mexicano
     private static final Map<String, Double> exchangeRates = new HashMap<>();
@@ -19,7 +22,12 @@ public class CurrencyData {
         exchangeRates.put("HKD", 0.45);
     }
 
-    // Método que devuelve el tipo de cambio entre dos divisas
+    /**
+     * Devuelve el tipo de cambio entre dos divisas.
+     * @param sourceCurrency La divisa de origen.
+     * @param targetCurrency La divisa de destino.
+     * @return El tipo de cambio entre las dos divisas.
+     */
     public static double getExchangeRate(String sourceCurrency, String targetCurrency) {
         if (sourceCurrency.equals(targetCurrency)) {
             return 1;
@@ -48,7 +56,11 @@ public class CurrencyData {
         currencyNames.put("HKD", "Dólares de Hong Kong");
     }
 
-    // Método que devuelve el nombre de una divisa
+    /**
+     * Devuelve el nombre de una divisa.
+     * @param currency La divisa de la que se quiere obtener el nombre.
+     * @return El nombre de la divisa.
+     */
     public static String getCurrencyName(String currency) {
         return currencyNames.get(currency);
     }

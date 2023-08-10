@@ -1,3 +1,10 @@
+/**
+ * Esta clase representa una aplicación de conversión de monedas y temperaturas.
+ * Extiende JFrame y contiene un bucle while que muestra un cuadro de diálogo para seleccionar el tipo de conversión.
+ * El usuario puede elegir entre conversión de monedas y de temperaturas.
+ * La opción seleccionada se utiliza para crear una instancia de la clase ConverterBase y llamar a su método convert.
+ * El programa continúa ejecutándose hasta que el usuario elige salir.
+ */
 package mx.com.alura.converter.core;
 
 import javax.swing.*;
@@ -6,6 +13,13 @@ import mx.com.alura.converter.core.converters.ConverterBase;
 
 public class Converter extends JFrame {
 
+    /**
+     * El constructor de la clase Converter muestra un cuadro de diálogo para
+     * seleccionar el tipo de conversión. El usuario puede elegir entre conversión
+     * de monedas y de temperaturas. La opción seleccionada se utiliza para crear
+     * una instancia de la clase ConverterBase y llamar a su método convert. El
+     * programa continúa ejecutándose hasta que el usuario elige salir.
+     */
     public Converter() {
         boolean continueProgram = true;
         while (continueProgram) {

@@ -1,7 +1,17 @@
 package mx.com.alura.converter.data;
 
+/**
+ * La clase TemperatureData se utiliza para convertir temperaturas entre diferentes unidades de medida.
+ */
 public class TemperatureData {
 
+    /**
+     * Convierte una cantidad de temperatura de una unidad de medida a otra.
+     * @param amount La cantidad de temperatura a convertir.
+     * @param sourceUnit La unidad de medida de la cantidad de temperatura proporcionada.
+     * @param targetUnit La unidad de medida a la que se debe convertir la cantidad de temperatura.
+     * @return La cantidad de temperatura convertida en la unidad de medida especificada.
+     */
     public double getResult(double amount, String sourceUnit, String targetUnit) {
         double convertedAmount = 0;
         if (sourceUnit.equals(targetUnit)) {
