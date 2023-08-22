@@ -13,7 +13,7 @@ public class CurrencyData {
     static {
         exchangeRates.put("USD", 0.058);
         exchangeRates.put("EUR", 0.049);
-        exchangeRates.put("PY", 6.35);
+        exchangeRates.put("JPY", 6.35);
         exchangeRates.put("GBP", 0.042);
         exchangeRates.put("AUD", 0.079);
         exchangeRates.put("CAD", 0.073);
